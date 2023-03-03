@@ -5,9 +5,9 @@ spring:
   profiles:
     active: dev
   config:
-    import: "optional:configserver:"
+    import: "optional:configserver:http://localhost:8088" # config 서버 url 입력
   application:
-    name: hyuuny # config-repository? yml ?? -> hyuuny-dev.yml[????????]-[??? ??].yml
+    name: hyuuny # config-repository의 yml 형식 -> hyuuny-dev.yml[애플리케이션명]-[환경].yml
   cloud:
     config:
       uri: http://localhost:8088
